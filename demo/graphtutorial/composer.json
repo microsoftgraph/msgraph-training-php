@@ -1,0 +1,9 @@
+{
+    "name": "microsoft/graphtutorial",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "microsoft/microsoft-graph": "^1.60"
+    }
+}
