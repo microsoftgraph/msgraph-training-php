@@ -1,0 +1,7 @@
+{
+    "sourceDirectory": "./demo",
+    "exampleConfigFile": "./graphtutorial/.env.example",
+    "configFile": ".env",
+    "archiveFile": "PhpQuickStart.zip",
+    "zipReadMe": "./README.md"
+}
