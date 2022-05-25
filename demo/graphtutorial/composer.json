@@ -5,5 +5,8 @@
     "require": {
         "vlucas/phpdotenv": "^5.4",
         "microsoft/microsoft-graph": "^1.60"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.7"
     }
 }
