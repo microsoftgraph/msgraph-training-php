@@ -11,14 +11,14 @@ use GuzzleHttp\Client;
 
 class GraphHelper {
     // <UserAuthConfigSnippet>
-    private static $tokenClient;
-    private static $clientId = '';
-    private static $authTenant = '';
-    private static $graphUserScopes = '';
-    private static $userClient;
-    private static $userToken;
+    private static Client $tokenClient;
+    private static string $clientId = '';
+    private static string $authTenant = '';
+    private static string $graphUserScopes = '';
+    private static Graph $userClient;
+    private static string $userToken;
 
-    public static function initializeGraphForUserAuth() {
+    public static function initializeGraphForUserAuth(): void {
         GraphHelper::$tokenClient = new Client();
         GraphHelper::$clientId = $_ENV['CLIENT_ID'];
         GraphHelper::$authTenant = $_ENV['AUTH_TENANT'];
@@ -124,7 +124,7 @@ class GraphHelper {
     // </GetInboxSnippet>
 
     // <SendMailSnippet>
-    public static function sendMail(string $subject, string $body, string $recipient) {
+    public static function sendMail(string $subject, string $body, string $recipient): void {
         $token = GraphHelper::getUserToken();
         GraphHelper::$userClient->setAccessToken($token);
 
@@ -152,11 +152,11 @@ class GraphHelper {
     // </SendMailSnippet>
 
     // <AppOnyAuthConfigSnippet>
-    private static $clientSecret = '';
-    private static $tenantId = '';
-    private static $appClient;
+    private static string $clientSecret = '';
+    private static string $tenantId = '';
+    private static Graph $appClient;
 
-    private static function ensureGraphForAppOnlyAuth() {
+    private static function ensureGraphForAppOnlyAuth(): void {
         if (isset(GraphHelper::$appClient)) {
             return;
         }
@@ -212,7 +212,7 @@ class GraphHelper {
     // </GetUsersSnippet>
 
     // <MakeGraphCallSnippet>
-    public static function makeGraphCall() {
+    public static function makeGraphCall(): void {
         // INSERT YOUR CODE HERE
         // Note: if using $appClient, be sure to call ensureGraphForAppOnlyAuth
         // before using it.
