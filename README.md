@@ -1,5 +1,7 @@
 # Build PHP apps with Microsoft Graph - Completed project
 
+[![PHP Composer](https://github.com/microsoftgraph/msgraph-training-php/actions/workflows/php.yml/badge.svg)](https://github.com/microsoftgraph/msgraph-training-php/actions/workflows/php.yml)
+
 This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from PHP applications. This code is the result of completing the [PHP Microsoft Graph tutorial](https://docs.microsoft.com/graph/tutorials/php).
 
 ## Running the sample
