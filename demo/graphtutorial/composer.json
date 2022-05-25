@@ -1,5 +1,6 @@
 {
     "name": "microsoft/graphtutorial",
+    "description": "Microsoft Graph PHP tutorial",
     "type": "project",
     "license": "MIT",
     "scripts": {
