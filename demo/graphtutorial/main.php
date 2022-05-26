@@ -55,13 +55,13 @@ while ($choice != 0) {
 // </ProgramSnippet>
 
 // <InitializeGraphSnippet>
-function initializeGraph() {
+function initializeGraph(): void {
     GraphHelper::initializeGraphForUserAuth();
 }
 // </InitializeGraphSnippet>
 
 // <GreetUserSnippet>
-function greetUser() {
+function greetUser(): void {
     try {
         $user = GraphHelper::getUser();
         print('Hello, '.$user->getDisplayName().'!'.PHP_EOL);
@@ -74,13 +74,13 @@ function greetUser() {
         }
         print('Email: '.$email.PHP_EOL.PHP_EOL);
     } catch (Exception $e) {
-        print('Error getting user: '.$e.-getMessage().PHP_EOL.PHP_EOL);
+        print('Error getting user: '.$e->getMessage().PHP_EOL.PHP_EOL);
     }
 }
 // </GreetUserSnippet>
 
 // <DisplayAccessTokenSnippet>
-function displayAccessToken() {
+function displayAccessToken(): void {
     try {
         $token = GraphHelper::getUserToken();
         print('User token: '.$token.PHP_EOL.PHP_EOL);
@@ -91,7 +91,7 @@ function displayAccessToken() {
 // </DisplayAccessTokenSnippet>
 
 // <ListInboxSnippet>
-function listInbox() {
+function listInbox(): void {
     try {
         $messages = GraphHelper::getInbox();
 
@@ -113,7 +113,7 @@ function listInbox() {
 // </ListInboxSnippet>
 
 // <SendMailSnippet>
-function sendMail() {
+function sendMail(): void {
     try {
         // Send mail to the signed-in user
         // Get the user for their email address
@@ -136,7 +136,7 @@ function sendMail() {
 // </SendMailSnippet>
 
 // <ListUsersSnippet>
-function listUsers() {
+function listUsers(): void {
     try {
         $users = GraphHelper::getUsers();
 
@@ -158,7 +158,7 @@ function listUsers() {
 // </ListUsersSnippet>
 
 // <MakeGraphCallSnippet>
-function makeGraphCall() {
+function makeGraphCall(): void {
     try {
         GraphHelper::makeGraphCall();
     } catch (Exception $e) {
