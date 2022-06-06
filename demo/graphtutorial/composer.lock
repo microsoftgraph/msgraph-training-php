@@ -393,16 +393,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "1.66.0",
+            "version": "1.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "cfd885c161d27f1e13814c6084a601e7dbb17858"
+                "reference": "c35e0328cfe14eae2a96150557dfb08b2de91c21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/cfd885c161d27f1e13814c6084a601e7dbb17858",
-                "reference": "cfd885c161d27f1e13814c6084a601e7dbb17858",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/c35e0328cfe14eae2a96150557dfb08b2de91c21",
+                "reference": "c35e0328cfe14eae2a96150557dfb08b2de91c21",
                 "shasum": ""
             },
             "require": {
@@ -438,9 +438,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.66.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.67.0"
             },
-            "time": "2022-05-24T18:08:36+00:00"
+            "time": "2022-06-02T07:04:22+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -868,16 +868,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
                 "shasum": ""
             },
             "require": {
@@ -892,7 +892,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -931,7 +931,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -947,7 +947,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-30T18:21:41+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
