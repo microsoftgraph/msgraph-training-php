@@ -401,16 +401,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "1.74.0",
+            "version": "1.75.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "a43deb66661917d92bf62de1f29f6799b30ea91c"
+                "reference": "e14d68d8e78f217ab0c303169c389c4ebf5d9e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/a43deb66661917d92bf62de1f29f6799b30ea91c",
-                "reference": "a43deb66661917d92bf62de1f29f6799b30ea91c",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/e14d68d8e78f217ab0c303169c389c4ebf5d9e11",
+                "reference": "e14d68d8e78f217ab0c303169c389c4ebf5d9e11",
                 "shasum": ""
             },
             "require": {
@@ -446,9 +446,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.74.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.75.0"
             },
-            "time": "2022-08-31T12:12:48+00:00"
+            "time": "2022-09-15T14:43:49+00:00"
         },
         {
             "name": "phpoption/phpoption",
