@@ -282,16 +282,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.1",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379"
+                "reference": "67c26b443f348a51926030c83481b85718457d3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/69568e4293f4fa993f3b0e51c9723e1e17c41379",
-                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
+                "reference": "67c26b443f348a51926030c83481b85718457d3d",
                 "shasum": ""
             },
             "require": {
@@ -381,7 +381,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
             },
             "funding": [
                 {
@@ -397,20 +397,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-28T14:45:39+00:00"
+            "time": "2022-10-26T14:07:24+00:00"
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "1.80.0",
+            "version": "1.81.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "37f763d047a9b1d37f755867731be91f4ddd0f1c"
+                "reference": "951515671eb167f417903bf4b23af6d49fcbfb76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/37f763d047a9b1d37f755867731be91f4ddd0f1c",
-                "reference": "37f763d047a9b1d37f755867731be91f4ddd0f1c",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/951515671eb167f417903bf4b23af6d49fcbfb76",
+                "reference": "951515671eb167f417903bf4b23af6d49fcbfb76",
                 "shasum": ""
             },
             "require": {
@@ -446,9 +446,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.80.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/1.81.0"
             },
-            "time": "2022-10-21T17:22:04+00:00"
+            "time": "2022-10-25T13:05:29+00:00"
         },
         {
             "name": "phpoption/phpoption",
