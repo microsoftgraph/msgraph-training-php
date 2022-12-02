@@ -11,29 +11,50 @@ permissions:
 
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: demo/graphtutorial
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
 
-    - name: Validate composer.json and composer.lock
+    - name: (User) Validate composer.json and composer.lock
+      working-directory: user-auth/graphtutorial/
       run: composer validate --strict
 
-    - name: Cache Composer packages
+    - name: (User) Cache Composer packages
       id: composer-cache
       uses: actions/cache@v3
       with:
-        path: vendor
+        path: user-auth/graphtutorial/vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
+    - name: (User) Install dependencies
+      working-directory: user-auth/graphtutorial/
       run: composer install --prefer-dist --no-progress
 
-    - name: Run test suite
+    - name: (User) Run test suite
+      working-directory: user-auth/graphtutorial/
+      run: composer run-script test
+
+    - name: (App-only) Validate composer.json and composer.lock
+      working-directory: app-auth/graphapponlytutorial/
+      run: composer validate --strict
+
+    - name: (App-only) Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: app-auth/graphapponlytutorial/vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: (App-only) Install dependencies
+      working-directory: app-auth/graphapponlytutorial/
+      run: composer install --prefer-dist --no-progress
+
+    - name: (App-only) Run test suite
+      working-directory: app-auth/graphapponlytutorial/
       run: composer run-script test

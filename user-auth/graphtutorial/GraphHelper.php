@@ -13,7 +13,7 @@ class GraphHelper {
     // <UserAuthConfigSnippet>
     private static Client $tokenClient;
     private static string $clientId = '';
-    private static string $authTenant = '';
+    private static string $tenantId = '';
     private static string $graphUserScopes = '';
     private static Graph $userClient;
     private static string $userToken;
@@ -21,7 +21,7 @@ class GraphHelper {
     public static function initializeGraphForUserAuth(): void {
         GraphHelper::$tokenClient = new Client();
         GraphHelper::$clientId = $_ENV['CLIENT_ID'];
-        GraphHelper::$authTenant = $_ENV['AUTH_TENANT'];
+        GraphHelper::$tenantId = $_ENV['TENANT_ID'];
         GraphHelper::$graphUserScopes = $_ENV['GRAPH_USER_SCOPES'];
         GraphHelper::$userClient = new Graph();
     }
@@ -36,8 +36,8 @@ class GraphHelper {
         }
 
         // https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code
-        $deviceCodeRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$authTenant.'/oauth2/v2.0/devicecode';
-        $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$authTenant.'/oauth2/v2.0/token';
+        $deviceCodeRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/devicecode';
+        $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/token';
 
         // First POST to /devicecode
         $deviceCodeResponse = json_decode(GraphHelper::$tokenClient->post($deviceCodeRequestUrl, [
@@ -151,77 +151,11 @@ class GraphHelper {
     }
     // </SendMailSnippet>
 
-    // <AppOnyAuthConfigSnippet>
-    private static string $clientSecret = '';
-    private static string $tenantId = '';
-    private static Graph $appClient;
-
-    private static function ensureGraphForAppOnlyAuth(): void {
-        if (isset(GraphHelper::$appClient)) {
-            return;
-        }
-
-        GraphHelper::$clientSecret = $_ENV['CLIENT_SECRET'];
-        GraphHelper::$tenantId = $_ENV['TENANT_ID'];
-
-        // https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
-        $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/token';
-
-        // POST to the /token endpoint
-        $tokenResponse = GraphHelper::$tokenClient->post($tokenRequestUrl, [
-            'form_params' => [
-                'client_id' => GraphHelper::$clientId,
-                'client_secret' => GraphHelper::$clientSecret,
-                'grant_type' => 'client_credentials',
-                'scope' => 'https://graph.microsoft.com/.default'
-            ],
-            // These options are needed to enable getting
-            // the response body from a 4xx response
-            'http_errors' => false,
-            'curl' => [
-                CURLOPT_FAILONERROR => false
-            ]
-        ]);
-
-        $responseBody = json_decode($tokenResponse->getBody()->getContents());
-        if ($tokenResponse->getStatusCode() == 200) {
-            // Create the app-only client and set the token
-            GraphHelper::$appClient = new Graph();
-            GraphHelper::$appClient->setAccessToken($responseBody->access_token);
-        } else {
-            $error = isset($responseBody->error) ? $responseBody->error : $tokenResponse->getStatusCode();
-            throw new Exception('Token endpoint returned '.$error, 100);
-        }
-    }
-    // </AppOnyAuthConfigSnippet>
-
-    // <GetUsersSnippet>
-    public static function getUsers(): Http\GraphCollectionRequest {
-        GraphHelper::ensureGraphForAppOnlyAuth();
-
-        // Only request specific properties
-        $select = '$select=displayName,id,mail';
-        // Sort by display name
-        $orderBy = '$orderBy=displayName';
-
-        $requestUrl = '/users?'.$select.'&'.$orderBy;
-        return GraphHelper::$appClient->createCollectionRequest('GET', $requestUrl)
-                                      ->setReturnType(Model\User::class)
-                                      ->setPageSize(25);
-    }
-    // </GetUsersSnippet>
-
     // <MakeGraphCallSnippet>
     public static function makeGraphCall(): void {
+        $token = GraphHelper::getUserToken();
+        GraphHelper::$userClient->setAccessToken($token);
         // INSERT YOUR CODE HERE
-        // Note: if using $appClient, be sure to call ensureGraphForAppOnlyAuth
-        // before using it.
-        // GraphHelper::ensureGraphForAppOnlyAuth();
-
-        // Note: if using $userClient, be sure to get the user
-        // token and set it in the client
-        // $token = GraphHelper::getUserToken();
-        // GraphHelper::$userClient->setAccessToken($token);
     }
     // </MakeGraphCallSnippet>
 }

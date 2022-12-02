@@ -12,7 +12,7 @@ print('PHP Graph Tutorial'.PHP_EOL.PHP_EOL);
 // Load .env file
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-$dotenv->required(['CLIENT_ID', 'CLIENT_SECRET', 'TENANT_ID', 'AUTH_TENANT', 'GRAPH_USER_SCOPES']);
+$dotenv->required(['CLIENT_ID', 'TENANT_ID', 'GRAPH_USER_SCOPES']);
 
 initializeGraph();
 
@@ -26,8 +26,7 @@ while ($choice != 0) {
     echo('1. Display access token'.PHP_EOL);
     echo('2. List my inbox'.PHP_EOL);
     echo('3. Send mail'.PHP_EOL);
-    echo('4. List users (requires app-only)'.PHP_EOL);
-    echo('5. Make a Graph call'.PHP_EOL);
+    echo('4. Make a Graph call'.PHP_EOL);
 
     $choice = (int)readline('');
 
@@ -42,9 +41,6 @@ while ($choice != 0) {
             sendMail();
             break;
         case 4:
-            listUsers();
-            break;
-        case 5:
             makeGraphCall();
             break;
         case 0:
@@ -134,28 +130,6 @@ function sendMail(): void {
     }
 }
 // </SendMailSnippet>
-
-// <ListUsersSnippet>
-function listUsers(): void {
-    try {
-        $users = GraphHelper::getUsers();
-
-        // Output each user's details
-        foreach ($users->getPage() as $user) {
-            print('User: '.$user->getDisplayName().PHP_EOL);
-            print('  ID: '.$user->getId().PHP_EOL);
-            $email = $user->getMail();
-            $email = isset($email) ? $email : 'NO EMAIL';
-            print('  Email: '.$email.PHP_EOL);
-        }
-
-        $moreAvailable = $users->isEnd() ? 'False' : 'True';
-        print(PHP_EOL.'More users available? '.$moreAvailable.PHP_EOL.PHP_EOL);
-    } catch (Exception $e) {
-        print(PHP_EOL.'Error getting users: '.$e->getMessage().PHP_EOL.PHP_EOL);
-    }
-}
-// </ListUsersSnippet>
 
 // <MakeGraphCallSnippet>
 function makeGraphCall(): void {
