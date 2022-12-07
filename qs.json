@@ -3,5 +3,8 @@
     "exampleConfigFile": "./graphtutorial/.env.example",
     "configFile": ".env",
     "archiveFile": "PhpQuickStart.zip",
-    "zipReadMe": "./README.md"
+    "zipReadMe": "./README.md",
+    "excludeFiles": [
+        "user-auth/RegisterAppForUserAuth.ps1"
+    ]
 }
