@@ -36,7 +36,7 @@ class GraphHelper {
             return GraphHelper::$appToken;
         }
 
-        // https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
+        // https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
         $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/token';
 
         // POST to the /token endpoint

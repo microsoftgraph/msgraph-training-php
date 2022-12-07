@@ -35,7 +35,7 @@ class GraphHelper {
             return GraphHelper::$userToken;
         }
 
-        // https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code
+        // https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code
         $deviceCodeRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/devicecode';
         $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/token';
 
