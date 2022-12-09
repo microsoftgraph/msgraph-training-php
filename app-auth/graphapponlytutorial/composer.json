@@ -1,0 +1,16 @@
+{
+    "name": "microsoft/graphapponlytutorial",
+    "description": "Microsoft Graph PHP App-Only tutorial",
+    "type": "project",
+    "license": "MIT",
+    "scripts": {
+        "test": "./vendor/bin/phpstan analyse -c ./phpstan.neon --level 7 ./"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "microsoft/microsoft-graph": "^1.60"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.7"
+    }
+}
