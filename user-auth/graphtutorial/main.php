@@ -100,7 +100,8 @@ function listInbox(): void {
             print('  Received: '.$message->getReceivedDateTime()->format(\DateTimeInterface::RFC2822).PHP_EOL);
         }
 
-        $moreAvailable = $messages->getOdataNextLink() != null ? 'False' : 'True';
+        $nextLink = $messages->getOdataNextLink();
+        $moreAvailable = isset($nextLink) && $nextLink != '' ? 'True' : 'False';
         print(PHP_EOL.'More messages available? '.$moreAvailable.PHP_EOL.PHP_EOL);
     } catch (Exception $e) {
         print('Error getting user\'s inbox: '.$e->getMessage().PHP_EOL.PHP_EOL);
