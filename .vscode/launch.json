@@ -10,6 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/user-auth/graphtutorial/main.php",
             "cwd": "${fileDirname}",
+            "externalConsole": true,
             "port": 0,
             "runtimeArgs": [
                 "-dxdebug.start_with_request=yes"
@@ -25,6 +26,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/app-auth/graphapponlytutorial/main.php",
             "cwd": "${fileDirname}",
+            "externalConsole": true,
             "port": 0,
             "runtimeArgs": [
                 "-dxdebug.start_with_request=yes"
