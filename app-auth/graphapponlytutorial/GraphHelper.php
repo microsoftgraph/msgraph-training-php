@@ -3,13 +3,14 @@
 // Licensed under the MIT license.
 
 // <UseSnippet>
+
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 use Microsoft\Graph\Generated\Models;
 use Microsoft\Graph\Generated\Users\UsersRequestBuilderGetQueryParameters;
 use Microsoft\Graph\Generated\Users\UsersRequestBuilderGetRequestConfiguration;
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
 // </UseSnippet>
 
 class GraphHelper {
@@ -17,7 +18,7 @@ class GraphHelper {
     private static string $clientId = '';
     private static string $clientSecret = '';
     private static string $tenantId = '';
-    private static PhpLeagueAuthenticationProvider $authProvider;
+    private static GraphPhpLeagueAuthenticationProvider $authProvider;
     private static GraphServiceClient $appClient;
 
     public static function initializeGraphForAppOnlyAuth(): void {
@@ -30,7 +31,7 @@ class GraphHelper {
             GraphHelper::$clientId,
             GraphHelper::$clientSecret);
 
-        GraphHelper::$authProvider = new PhpLeagueAuthenticationProvider(
+        GraphHelper::$authProvider = new GraphPhpLeagueAuthenticationProvider(
             $tokenContext,
             ['https://graph.microsoft.com/.default']);
 
