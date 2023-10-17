@@ -35,7 +35,7 @@ class GraphHelper {
             GraphHelper::$graphUserScopes);
         $authProvider = new BaseBearerTokenAuthenticationProvider(GraphHelper::$tokenProvider);
         $adapter = new GraphRequestAdapter($authProvider);
-        GraphHelper::$userClient = new GraphServiceClient($adapter);
+        GraphHelper::$userClient = GraphServiceClient::createWithRequestAdapter($adapter);
     }
     // </UserAuthConfigSnippet>
 
