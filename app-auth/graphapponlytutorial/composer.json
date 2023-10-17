@@ -8,11 +8,17 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.4",
-        "microsoft/microsoft-graph": "2.0.0-RC14"
+        "microsoft/microsoft-graph": "^2.0.0-RC26",
+        "php-http/guzzle7-adapter": "^1.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.10"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
 }
