@@ -1,0 +1,25 @@
+name: Close stale issues
+description: Close issues labeled no recent activity with no response for 3 days
+resource: repository
+
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches:
+      - description: Close any issues with no recent activity label that have not had activity for 3 days
+        frequencies:
+          - daily:
+              time: 13:00
+        filters:
+          - isOpen
+          - hasLabel:
+              label: no recent activity
+          - hasLabel:
+              label: needs author feedback
+          - noActivitySince:
+              days: 3
+        actions:
+          - removeLabel:
+              label: no recent activity
+          - removeLabel:
+              label: needs author feedback
+          - closeIssue
