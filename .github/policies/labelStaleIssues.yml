@@ -1,0 +1,41 @@
+name: Label stale issues
+description: Label issues waiting for author response with no response for a week
+resource: repository
+
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches:
+      - description: Label any issues waiting for author feedback with no response in 7 days
+        frequencies:
+          - daily:
+              time: 13:00
+        filters:
+          - isOpen
+          - hasLabel:
+              label: needs author feedback
+          - isNotLabeledWith:
+              label: no recent activity
+          - noActivitySince:
+              days: 7
+        actions:
+          - addLabel:
+              label: no recent activity
+          - addReply:
+              reply: This issue has been automatically marked as stale because it has been marked as needing author feedback but has not had any activity for **7 days**. It will be closed if no further activity occurs **within 3 days of this comment**.
+    eventResponderTasks:
+      - description: Remove needs author feedback and no recent activity if author comments
+        if:
+          - payloadType: Issue_Comment
+          - isAction: Created
+          - isActivitySender:
+              issueAuthor: true
+          - hasLabel:
+              label: needs author feedback
+          - isOpen
+        then:
+          - removeLabel:
+              label: needs author feedback
+          - removeLabel:
+              label: no recent activity
+          - addLabel:
+              label: 'needs attention :wave:'

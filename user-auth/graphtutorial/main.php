@@ -92,7 +92,7 @@ function listInbox(): void {
         $messages = GraphHelper::getInbox();
 
         // Output each message's details
-        foreach ($messages->getPage() as $message) {
+        foreach ($messages->getValue() as $message) {
             print('Message: '.$message->getSubject().PHP_EOL);
             print('  From: '.$message->getFrom()->getEmailAddress()->getName().PHP_EOL);
             $status = $message->getIsRead() ? "Read" : "Unread";
@@ -100,7 +100,8 @@ function listInbox(): void {
             print('  Received: '.$message->getReceivedDateTime()->format(\DateTimeInterface::RFC2822).PHP_EOL);
         }
 
-        $moreAvailable = $messages->isEnd() ? 'False' : 'True';
+        $nextLink = $messages->getOdataNextLink();
+        $moreAvailable = isset($nextLink) && $nextLink != '' ? 'True' : 'False';
         print(PHP_EOL.'More messages available? '.$moreAvailable.PHP_EOL.PHP_EOL);
     } catch (Exception $e) {
         print('Error getting user\'s inbox: '.$e->getMessage().PHP_EOL.PHP_EOL);

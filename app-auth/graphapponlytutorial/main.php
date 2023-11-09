@@ -22,7 +22,7 @@ while ($choice != 0) {
     echo('Please choose one of the following options:'.PHP_EOL);
     echo('0. Exit'.PHP_EOL);
     echo('1. Display access token'.PHP_EOL);
-    echo('2. List users (requires app-only)'.PHP_EOL);
+    echo('2. List users'.PHP_EOL);
     echo('3. Make a Graph call'.PHP_EOL);
 
     $choice = (int)readline('');
@@ -67,7 +67,7 @@ function listUsers(): void {
         $users = GraphHelper::getUsers();
 
         // Output each user's details
-        foreach ($users->getPage() as $user) {
+        foreach ($users->getValue() as $user) {
             print('User: '.$user->getDisplayName().PHP_EOL);
             print('  ID: '.$user->getId().PHP_EOL);
             $email = $user->getMail();
@@ -75,7 +75,8 @@ function listUsers(): void {
             print('  Email: '.$email.PHP_EOL);
         }
 
-        $moreAvailable = $users->isEnd() ? 'False' : 'True';
+        $nextLink = $users->getOdataNextLink();
+        $moreAvailable = isset($nextLink) && $nextLink != '' ? 'True' : 'False';
         print(PHP_EOL.'More users available? '.$moreAvailable.PHP_EOL.PHP_EOL);
     } catch (Exception $e) {
         print(PHP_EOL.'Error getting users: '.$e->getMessage().PHP_EOL.PHP_EOL);

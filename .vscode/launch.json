@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug user auth sample",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/user-auth/graphtutorial/main.php",
+            "cwd": "${fileDirname}",
+            "externalConsole": true,
+            "port": 0,
+            "runtimeArgs": [
+                "-dxdebug.start_with_request=yes"
+            ],
+            "env": {
+                "XDEBUG_MODE": "debug,develop",
+                "XDEBUG_CONFIG": "client_port=${port}"
+            }
+        },
+        {
+            "name": "Debug app auth sample",
+            "type": "php",
+            "request": "launch",
+            "program": "${workspaceFolder}/app-auth/graphapponlytutorial/main.php",
+            "cwd": "${fileDirname}",
+            "externalConsole": true,
+            "port": 0,
+            "runtimeArgs": [
+                "-dxdebug.start_with_request=yes"
+            ],
+            "env": {
+                "XDEBUG_MODE": "debug,develop",
+                "XDEBUG_CONFIG": "client_port=${port}"
+            }
+        }
+    ]
+}
