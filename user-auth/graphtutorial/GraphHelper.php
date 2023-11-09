@@ -3,158 +3,101 @@
 // Licensed under the MIT license.
 
 // <UseSnippet>
-use Microsoft\Graph\Graph;
-use Microsoft\Graph\Http;
-use Microsoft\Graph\Model;
-use GuzzleHttp\Client;
+use Microsoft\Graph\Generated\Models;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilderGetQueryParameters;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+use Microsoft\Graph\Generated\Users\Item\SendMail\SendMailPostRequestBody;
+use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilderGetQueryParameters;
+use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilderGetRequestConfiguration;
+use Microsoft\Graph\GraphRequestAdapter;
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Kiota\Abstractions\Authentication\BaseBearerTokenAuthenticationProvider;
+
+require_once 'DeviceCodeTokenProvider.php';
 // </UseSnippet>
 
 class GraphHelper {
     // <UserAuthConfigSnippet>
-    private static Client $tokenClient;
     private static string $clientId = '';
     private static string $tenantId = '';
     private static string $graphUserScopes = '';
-    private static Graph $userClient;
-    private static string $userToken;
+    private static DeviceCodeTokenProvider $tokenProvider;
+    private static GraphServiceClient $userClient;
 
     public static function initializeGraphForUserAuth(): void {
-        GraphHelper::$tokenClient = new Client();
         GraphHelper::$clientId = $_ENV['CLIENT_ID'];
         GraphHelper::$tenantId = $_ENV['TENANT_ID'];
         GraphHelper::$graphUserScopes = $_ENV['GRAPH_USER_SCOPES'];
-        GraphHelper::$userClient = new Graph();
+
+        GraphHelper::$tokenProvider = new DeviceCodeTokenProvider(
+            GraphHelper::$clientId,
+            GraphHelper::$tenantId,
+            GraphHelper::$graphUserScopes);
+        $authProvider = new BaseBearerTokenAuthenticationProvider(GraphHelper::$tokenProvider);
+        $adapter = new GraphRequestAdapter($authProvider);
+        GraphHelper::$userClient = GraphServiceClient::createWithRequestAdapter($adapter);
     }
     // </UserAuthConfigSnippet>
 
     // <GetUserTokenSnippet>
     public static function getUserToken(): string {
-        // If we already have a user token, just return it
-        // Tokens are valid for one hour, after that it needs to be refreshed
-        if (isset(GraphHelper::$userToken)) {
-            return GraphHelper::$userToken;
-        }
-
-        // https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code
-        $deviceCodeRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/devicecode';
-        $tokenRequestUrl = 'https://login.microsoftonline.com/'.GraphHelper::$tenantId.'/oauth2/v2.0/token';
-
-        // First POST to /devicecode
-        $deviceCodeResponse = json_decode(GraphHelper::$tokenClient->post($deviceCodeRequestUrl, [
-            'form_params' => [
-                'client_id' => GraphHelper::$clientId,
-                'scope' => GraphHelper::$graphUserScopes
-            ]
-        ])->getBody()->getContents());
-
-        // Display the user prompt
-        print($deviceCodeResponse->message.PHP_EOL);
-
-        // Response also indicates how often to poll for completion
-        // And gives a device code to send in the polling requests
-        $interval = (int)$deviceCodeResponse->interval;
-        $device_code = $deviceCodeResponse->device_code;
-
-        // Do polling - if attempt times out the token endpoint
-        // returns an error
-        while (true) {
-            sleep($interval);
-
-            // POST to the /token endpoint
-            $tokenResponse = GraphHelper::$tokenClient->post($tokenRequestUrl, [
-                'form_params' => [
-                    'client_id' => GraphHelper::$clientId,
-                    'grant_type' => 'urn:ietf:params:oauth:grant-type:device_code',
-                    'device_code' => $device_code
-                ],
-                // These options are needed to enable getting
-                // the response body from a 4xx response
-                'http_errors' => false,
-                'curl' => [
-                    CURLOPT_FAILONERROR => false
-                ]
-            ]);
-
-            if ($tokenResponse->getStatusCode() == 200) {
-                // Return the access_token
-                $responseBody = json_decode($tokenResponse->getBody()->getContents());
-                GraphHelper::$userToken = $responseBody->access_token;
-                return $responseBody->access_token;
-            } else if ($tokenResponse->getStatusCode() == 400) {
-                // Check the error in the response body
-                $responseBody = json_decode($tokenResponse->getBody()->getContents());
-                if (isset($responseBody->error)) {
-                    $error = $responseBody->error;
-                    // authorization_pending means we should keep polling
-                    if (strcmp($error, 'authorization_pending') != 0) {
-                        throw new Exception('Token endpoint returned '.$error, 100);
-                    }
-                }
-            }
-        }
+        return GraphHelper::$tokenProvider
+            ->getAuthorizationTokenAsync('https://graph.microsoft.com')->wait();
     }
     // </GetUserTokenSnippet>
 
     // <GetUserSnippet>
-    public static function getUser(): Model\User {
-        $token = GraphHelper::getUserToken();
-        GraphHelper::$userClient->setAccessToken($token);
-
-        return GraphHelper::$userClient->createRequest('GET', '/me?$select=displayName,mail,userPrincipalName')
-                                       ->setReturnType(Model\User::class)
-                                       ->execute();
+    public static function getUser(): Models\User {
+        $configuration = new UserItemRequestBuilderGetRequestConfiguration();
+        $configuration->queryParameters = new UserItemRequestBuilderGetQueryParameters();
+        $configuration->queryParameters->select = ['displayName','mail','userPrincipalName'];
+        return GraphHelper::$userClient->me()->get($configuration)->wait();
     }
     // </GetUserSnippet>
 
     // <GetInboxSnippet>
-    public static function getInbox(): Http\GraphCollectionRequest {
-        $token = GraphHelper::getUserToken();
-        GraphHelper::$userClient->setAccessToken($token);
-
+    public static function getInbox(): Models\MessageCollectionResponse {
+        $configuration = new MessagesRequestBuilderGetRequestConfiguration();
+        $configuration->queryParameters = new MessagesRequestBuilderGetQueryParameters();
         // Only request specific properties
-        $select = '$select=from,isRead,receivedDateTime,subject';
+        $configuration->queryParameters->select = ['from','isRead','receivedDateTime','subject'];
         // Sort by received time, newest first
-        $orderBy = '$orderBy=receivedDateTime DESC';
-
-        $requestUrl = '/me/mailFolders/inbox/messages?'.$select.'&'.$orderBy;
-        return GraphHelper::$userClient->createCollectionRequest('GET', $requestUrl)
-                                       ->setReturnType(Model\Message::class)
-                                       ->setPageSize(25);
+        $configuration->queryParameters->orderby = ['receivedDateTime DESC'];
+        // Get at most 25 results
+        $configuration->queryParameters->top = 25;
+        return GraphHelper::$userClient->me()
+            ->mailFolders()
+            ->byMailFolderId('inbox')
+            ->messages()
+            ->get($configuration)->wait();
     }
     // </GetInboxSnippet>
 
     // <SendMailSnippet>
     public static function sendMail(string $subject, string $body, string $recipient): void {
-        $token = GraphHelper::getUserToken();
-        GraphHelper::$userClient->setAccessToken($token);
+        $message = new Models\Message();
+        $message->setSubject($subject);
 
-        $sendMailBody = array(
-            'message' => array (
-                'subject' => $subject,
-                'body' => array (
-                    'content' => $body,
-                    'contentType' => 'text'
-                ),
-                'toRecipients' => array (
-                    array (
-                        'emailAddress' => array (
-                            'address' => $recipient
-                        )
-                    )
-                )
-            )
-        );
+        $itemBody = new Models\ItemBody();
+        $itemBody->setContent($body);
+        $itemBody->setContentType(new Models\BodyType(Models\BodyType::TEXT));
+        $message->setBody($itemBody);
 
-        GraphHelper::$userClient->createRequest('POST', '/me/sendMail')
-                                ->attachBody($sendMailBody)
-                                ->execute();
+        $email = new Models\EmailAddress();
+        $email->setAddress($recipient);
+        $to = new Models\Recipient();
+        $to->setEmailAddress($email);
+        $message->setToRecipients([$to]);
+
+        $sendMailBody = new SendMailPostRequestBody();
+        $sendMailBody->setMessage($message);
+
+        GraphHelper::$userClient->me()->sendMail()->post($sendMailBody)->wait();
     }
     // </SendMailSnippet>
 
     // <MakeGraphCallSnippet>
     public static function makeGraphCall(): void {
-        $token = GraphHelper::getUserToken();
-        GraphHelper::$userClient->setAccessToken($token);
         // INSERT YOUR CODE HERE
     }
     // </MakeGraphCallSnippet>
