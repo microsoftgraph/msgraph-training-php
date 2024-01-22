@@ -789,26 +789,26 @@
         },
         {
             "name": "microsoft/kiota-abstractions",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-abstractions-php.git",
-                "reference": "c62d26dd12cd973d03c1f348df40c9b2792da749"
+                "reference": "a25bf2811727052953c1c775e1acdc9925956675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-abstractions-php/zipball/c62d26dd12cd973d03c1f348df40c9b2792da749",
-                "reference": "c62d26dd12cd973d03c1f348df40c9b2792da749",
+                "url": "https://api.github.com/repos/microsoft/kiota-abstractions-php/zipball/a25bf2811727052953c1c775e1acdc9925956675",
+                "reference": "a25bf2811727052953c1c775e1acdc9925956675",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.13 || ^2.0",
                 "open-telemetry/sdk": "^1.0.0",
                 "php": "^7.4 || ^8.0",
-                "php-http/promise": "^1.2.0",
+                "php-http/promise": "~1.2.0",
                 "psr/http-message": "^1.1 || ^2.0",
                 "ramsey/uuid": "^3 || ^4",
-                "stduritemplate/stduritemplate": "^0.0.48"
+                "stduritemplate/stduritemplate": "^0.0.48 || ^0.0.49"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.2.0",
@@ -834,22 +834,22 @@
             "description": "Abstractions for Kiota",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-abstractions-php/issues",
-                "source": "https://github.com/microsoft/kiota-abstractions-php/tree/1.0.2"
+                "source": "https://github.com/microsoft/kiota-abstractions-php/tree/1.1.0"
             },
-            "time": "2023-12-01T07:53:19+00:00"
+            "time": "2024-01-10T13:04:56+00:00"
         },
         {
             "name": "microsoft/kiota-authentication-phpleague",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-authentication-phpleague-php.git",
-                "reference": "115d976de3276d6b72eb52fa6669b5f008b22442"
+                "reference": "a93bc1d0a674df732b1acf262ed2bf2108c839cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-authentication-phpleague-php/zipball/115d976de3276d6b72eb52fa6669b5f008b22442",
-                "reference": "115d976de3276d6b72eb52fa6669b5f008b22442",
+                "url": "https://api.github.com/repos/microsoft/kiota-authentication-phpleague-php/zipball/a93bc1d0a674df732b1acf262ed2bf2108c839cd",
+                "reference": "a93bc1d0a674df732b1acf262ed2bf2108c839cd",
                 "shasum": ""
             },
             "require": {
@@ -859,7 +859,6 @@
                 "league/oauth2-client": "^2.6.1",
                 "microsoft/kiota-abstractions": "^1.0.2",
                 "php": "^7.4 | ^8.0",
-                "php-http/promise": "^1.1.0",
                 "ramsey/uuid": "^4.2.3"
             },
             "require-dev": {
@@ -885,29 +884,29 @@
             "description": "Authentication provider for Kiota using the PHP League OAuth 2.0 client to authenticate against the Microsoft Identity platform",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-authentication-phpleague-php/issues",
-                "source": "https://github.com/microsoft/kiota-authentication-phpleague-php/tree/1.0.1"
+                "source": "https://github.com/microsoft/kiota-authentication-phpleague-php/tree/1.0.2"
             },
-            "time": "2023-12-01T08:52:00+00:00"
+            "time": "2024-01-11T13:14:19+00:00"
         },
         {
             "name": "microsoft/kiota-http-guzzle",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-http-guzzle-php.git",
-                "reference": "881ab5272e4f59b78eba812ff45a9ffa5dbbcdab"
+                "reference": "71b97ef9ce7352c29e7f34001525a995083282b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-http-guzzle-php/zipball/881ab5272e4f59b78eba812ff45a9ffa5dbbcdab",
-                "reference": "881ab5272e4f59b78eba812ff45a9ffa5dbbcdab",
+                "url": "https://api.github.com/repos/microsoft/kiota-http-guzzle-php/zipball/71b97ef9ce7352c29e7f34001525a995083282b1",
+                "reference": "71b97ef9ce7352c29e7f34001525a995083282b1",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-zlib": "*",
-                "guzzlehttp/guzzle": "^7.0",
-                "microsoft/kiota-abstractions": "^1.0.2",
+                "guzzlehttp/guzzle": "^7.4.5",
+                "microsoft/kiota-abstractions": "^1.1.0",
                 "php": "^7.4 | ^8.0"
             },
             "require-dev": {
@@ -933,9 +932,9 @@
             "description": "Kiota HTTP Request Adapter implementation",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-http-guzzle-php/issues",
-                "source": "https://github.com/microsoft/kiota-http-guzzle-php/tree/1.1.0"
+                "source": "https://github.com/microsoft/kiota-http-guzzle-php/tree/1.2.0"
             },
-            "time": "2023-12-01T09:35:10+00:00"
+            "time": "2024-01-11T14:04:14+00:00"
         },
         {
             "name": "microsoft/kiota-serialization-json",
@@ -1034,16 +1033,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "d5e468f06f814ebfdf83f174e277db05c98b129a"
+                "reference": "effc79831fc8defd5ffca2b3681e557895d45d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/d5e468f06f814ebfdf83f174e277db05c98b129a",
-                "reference": "d5e468f06f814ebfdf83f174e277db05c98b129a",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/effc79831fc8defd5ffca2b3681e557895d45d57",
+                "reference": "effc79831fc8defd5ffca2b3681e557895d45d57",
                 "shasum": ""
             },
             "require": {
@@ -1075,9 +1074,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/2.1.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/2.2.0"
             },
-            "time": "2023-12-01T10:35:11+00:00"
+            "time": "2024-01-17T10:29:02+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
@@ -1133,16 +1132,16 @@
         },
         {
             "name": "open-telemetry/api",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/api.git",
-                "reference": "d577d732333d38a9a6c16936363ee25f1e3f1c3c"
+                "reference": "401d04c6afe349afa78250ac862db2f89dbf94f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/api/zipball/d577d732333d38a9a6c16936363ee25f1e3f1c3c",
-                "reference": "d577d732333d38a9a6c16936363ee25f1e3f1c3c",
+                "url": "https://api.github.com/repos/opentelemetry-php/api/zipball/401d04c6afe349afa78250ac862db2f89dbf94f6",
+                "reference": "401d04c6afe349afa78250ac862db2f89dbf94f6",
                 "shasum": ""
             },
             "require": {
@@ -1152,6 +1151,9 @@
                 "symfony/polyfill-php80": "^1.26",
                 "symfony/polyfill-php81": "^1.26",
                 "symfony/polyfill-php82": "^1.26"
+            },
+            "conflict": {
+                "open-telemetry/sdk": "<=1.0.4"
             },
             "type": "library",
             "extra": {
@@ -1193,20 +1195,20 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2023-09-27T23:15:51+00:00"
+            "time": "2024-01-10T13:04:59+00:00"
         },
         {
             "name": "open-telemetry/context",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/context.git",
-                "reference": "99f3d54fa9f9ff67421774feeef5e5b1f209ea21"
+                "reference": "e9d254a7c89885e63fd2fde54e31e81aaaf52b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/context/zipball/99f3d54fa9f9ff67421774feeef5e5b1f209ea21",
-                "reference": "99f3d54fa9f9ff67421774feeef5e5b1f209ea21",
+                "url": "https://api.github.com/repos/opentelemetry-php/context/zipball/e9d254a7c89885e63fd2fde54e31e81aaaf52b7c",
+                "reference": "e9d254a7c89885e63fd2fde54e31e81aaaf52b7c",
                 "shasum": ""
             },
             "require": {
@@ -1254,20 +1256,20 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2023-09-05T03:38:44+00:00"
+            "time": "2024-01-13T05:50:44+00:00"
         },
         {
             "name": "open-telemetry/sdk",
-            "version": "1.0.1",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/sdk.git",
-                "reference": "806b82d8312243c78bdf8b6cc9f724e9e2fc77a7"
+                "reference": "a827f2544cfcd65eb39bf26bc0c4a0978de426e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/806b82d8312243c78bdf8b6cc9f724e9e2fc77a7",
-                "reference": "806b82d8312243c78bdf8b6cc9f724e9e2fc77a7",
+                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/a827f2544cfcd65eb39bf26bc0c4a0978de426e6",
+                "reference": "a827f2544cfcd65eb39bf26bc0c4a0978de426e6",
                 "shasum": ""
             },
             "require": {
@@ -1337,7 +1339,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2023-11-27T04:26:07+00:00"
+            "time": "2024-01-16T21:54:57+00:00"
         },
         {
             "name": "open-telemetry/sem-conv",
@@ -2263,16 +2265,16 @@
         },
         {
             "name": "stduritemplate/stduritemplate",
-            "version": "0.0.48",
+            "version": "0.0.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/std-uritemplate/std-uritemplate-php.git",
-                "reference": "6a47ddb6094464ffa160ec5c061f181a292c43ef"
+                "reference": "cb9cf708f9a19fadf99fd390da5d8233adabfed4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/std-uritemplate/std-uritemplate-php/zipball/6a47ddb6094464ffa160ec5c061f181a292c43ef",
-                "reference": "6a47ddb6094464ffa160ec5c061f181a292c43ef",
+                "url": "https://api.github.com/repos/std-uritemplate/std-uritemplate-php/zipball/cb9cf708f9a19fadf99fd390da5d8233adabfed4",
+                "reference": "cb9cf708f9a19fadf99fd390da5d8233adabfed4",
                 "shasum": ""
             },
             "require": {
@@ -2296,9 +2298,9 @@
             ],
             "description": "Std UriTemplate, RFC 6570 implementation",
             "support": {
-                "source": "https://github.com/std-uritemplate/std-uritemplate-php/tree/0.0.48"
+                "source": "https://github.com/std-uritemplate/std-uritemplate-php/tree/0.0.49"
             },
-            "time": "2023-11-29T12:45:34+00:00"
+            "time": "2023-12-12T12:27:00+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
