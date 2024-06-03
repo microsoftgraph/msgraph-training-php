@@ -789,16 +789,16 @@
         },
         {
             "name": "microsoft/kiota-abstractions",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-abstractions-php.git",
-                "reference": "951eb57f130131cad9f116381f866fac2f794959"
+                "reference": "b911a9cd389a15f7f1c61002d752dc05edac2a47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-abstractions-php/zipball/951eb57f130131cad9f116381f866fac2f794959",
-                "reference": "951eb57f130131cad9f116381f866fac2f794959",
+                "url": "https://api.github.com/repos/microsoft/kiota-abstractions-php/zipball/b911a9cd389a15f7f1c61002d752dc05edac2a47",
+                "reference": "b911a9cd389a15f7f1c61002d752dc05edac2a47",
                 "shasum": ""
             },
             "require": {
@@ -834,9 +834,9 @@
             "description": "Abstractions for Kiota",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-abstractions-php/issues",
-                "source": "https://github.com/microsoft/kiota-abstractions-php/tree/1.3.1"
+                "source": "https://github.com/microsoft/kiota-abstractions-php/tree/1.4.0"
             },
-            "time": "2024-05-02T13:55:30+00:00"
+            "time": "2024-05-30T11:52:07+00:00"
         },
         {
             "name": "microsoft/kiota-authentication-phpleague",
@@ -938,16 +938,16 @@
         },
         {
             "name": "microsoft/kiota-serialization-form",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-serialization-form-php.git",
-                "reference": "2896ec2da3ccc964f1bd7f168ca53f3625ed0b2c"
+                "reference": "e6de40f5558d11d070b67e5d8a7b7978b3e99b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-serialization-form-php/zipball/2896ec2da3ccc964f1bd7f168ca53f3625ed0b2c",
-                "reference": "2896ec2da3ccc964f1bd7f168ca53f3625ed0b2c",
+                "url": "https://api.github.com/repos/microsoft/kiota-serialization-form-php/zipball/e6de40f5558d11d070b67e5d8a7b7978b3e99b35",
+                "reference": "e6de40f5558d11d070b67e5d8a7b7978b3e99b35",
                 "shasum": ""
             },
             "require": {
@@ -981,9 +981,9 @@
             "description": "Form implementation of Kiota abstractions serialization.",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-serialization-form-php/issues",
-                "source": "https://github.com/microsoft/kiota-serialization-form-php/tree/1.1.0"
+                "source": "https://github.com/microsoft/kiota-serialization-form-php/tree/1.1.1"
             },
-            "time": "2024-05-08T11:36:00+00:00"
+            "time": "2024-05-30T13:38:01+00:00"
         },
         {
             "name": "microsoft/kiota-serialization-json",
@@ -1131,16 +1131,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "2.10.0",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "ba55365951db675e6a8b9fbd6f1b75c240a0d16c"
+                "reference": "e8aa247497b62b2eb95b0c01f457997727db7e15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/ba55365951db675e6a8b9fbd6f1b75c240a0d16c",
-                "reference": "ba55365951db675e6a8b9fbd6f1b75c240a0d16c",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/e8aa247497b62b2eb95b0c01f457997727db7e15",
+                "reference": "e8aa247497b62b2eb95b0c01f457997727db7e15",
                 "shasum": ""
             },
             "require": {
@@ -1172,9 +1172,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/2.10.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.11.0"
             },
-            "time": "2024-05-21T10:45:40+00:00"
+            "time": "2024-05-30T13:41:09+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
