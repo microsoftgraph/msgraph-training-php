@@ -1131,16 +1131,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.14.1",
+            "version": "v2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "da09326a927d7d49adbe43f8645a54dee2d9370a"
+                "reference": "0f86e3464fda9a79b8463664d55994695b5cb88e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/da09326a927d7d49adbe43f8645a54dee2d9370a",
-                "reference": "da09326a927d7d49adbe43f8645a54dee2d9370a",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/0f86e3464fda9a79b8463664d55994695b5cb88e",
+                "reference": "0f86e3464fda9a79b8463664d55994695b5cb88e",
                 "shasum": ""
             },
             "require": {
@@ -1172,9 +1172,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.14.1"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.15.0"
             },
-            "time": "2024-09-30T13:23:33+00:00"
+            "time": "2024-10-02T10:40:50+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
@@ -1550,16 +1550,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.19.4",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "0700efda8d7526335132360167315fdab3aeb599"
+                "reference": "82fe4c73ef3363caed49ff8dd1539ba06044910d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/0700efda8d7526335132360167315fdab3aeb599",
-                "reference": "0700efda8d7526335132360167315fdab3aeb599",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/82fe4c73ef3363caed49ff8dd1539ba06044910d",
+                "reference": "82fe4c73ef3363caed49ff8dd1539ba06044910d",
                 "shasum": ""
             },
             "require": {
@@ -1623,9 +1623,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.19.4"
+                "source": "https://github.com/php-http/discovery/tree/1.20.0"
             },
-            "time": "2024-03-29T13:00:05+00:00"
+            "time": "2024-10-02T11:20:13+00:00"
         },
         {
             "name": "php-http/guzzle7-adapter",
