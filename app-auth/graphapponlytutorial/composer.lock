@@ -520,16 +520,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8"
+                "reference": "f9c436286ab2892c7db7be8c8da4ef61ccf7b455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8",
-                "reference": "6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/f9c436286ab2892c7db7be8c8da4ef61ccf7b455",
+                "reference": "f9c436286ab2892c7db7be8c8da4ef61ccf7b455",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.3"
+                "source": "https://github.com/guzzle/promises/tree/2.0.4"
             },
             "funding": [
                 {
@@ -599,7 +599,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-18T10:29:17+00:00"
+            "time": "2024-10-17T10:06:22+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1131,16 +1131,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.16.0",
+            "version": "v2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "706c25c117fc2bbd8b781d77e0384f08b3261d64"
+                "reference": "b10cfa410c1687b2f9ed9f37fbb70d29edeb8da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/706c25c117fc2bbd8b781d77e0384f08b3261d64",
-                "reference": "706c25c117fc2bbd8b781d77e0384f08b3261d64",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/b10cfa410c1687b2f9ed9f37fbb70d29edeb8da3",
+                "reference": "b10cfa410c1687b2f9ed9f37fbb70d29edeb8da3",
                 "shasum": ""
             },
             "require": {
@@ -1172,9 +1172,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.16.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.17.0"
             },
-            "time": "2024-10-08T19:25:34+00:00"
+            "time": "2024-10-17T14:23:26+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
