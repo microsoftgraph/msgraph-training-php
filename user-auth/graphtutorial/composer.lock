@@ -840,16 +840,16 @@
         },
         {
             "name": "microsoft/kiota-authentication-phpleague",
-            "version": "1.2.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/kiota-authentication-phpleague-php.git",
-                "reference": "49e739a881d0834de9de30d49cc8b994bb8b2b3d"
+                "reference": "7fddd497c1ff92ecf3016513f6dd4e4f418a5705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoft/kiota-authentication-phpleague-php/zipball/49e739a881d0834de9de30d49cc8b994bb8b2b3d",
-                "reference": "49e739a881d0834de9de30d49cc8b994bb8b2b3d",
+                "url": "https://api.github.com/repos/microsoft/kiota-authentication-phpleague-php/zipball/7fddd497c1ff92ecf3016513f6dd4e4f418a5705",
+                "reference": "7fddd497c1ff92ecf3016513f6dd4e4f418a5705",
                 "shasum": ""
             },
             "require": {
@@ -884,9 +884,9 @@
             "description": "Authentication provider for Kiota using the PHP League OAuth 2.0 client to authenticate against the Microsoft Identity platform",
             "support": {
                 "issues": "https://github.com/microsoft/kiota-authentication-phpleague-php/issues",
-                "source": "https://github.com/microsoft/kiota-authentication-phpleague-php/tree/1.2.0"
+                "source": "https://github.com/microsoft/kiota-authentication-phpleague-php/tree/1.3.1"
             },
-            "time": "2024-06-20T12:29:08+00:00"
+            "time": "2024-11-27T12:46:06+00:00"
         },
         {
             "name": "microsoft/kiota-http-guzzle",
@@ -1131,16 +1131,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.18.0",
+            "version": "v2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "3dbfca5ddefe9ef67cccab40f8c2b6152cf3780c"
+                "reference": "adbbd41b75fd429a0e8d90ea91a2dca12425931a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/3dbfca5ddefe9ef67cccab40f8c2b6152cf3780c",
-                "reference": "3dbfca5ddefe9ef67cccab40f8c2b6152cf3780c",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/adbbd41b75fd429a0e8d90ea91a2dca12425931a",
+                "reference": "adbbd41b75fd429a0e8d90ea91a2dca12425931a",
                 "shasum": ""
             },
             "require": {
@@ -1172,9 +1172,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.18.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.19.0"
             },
-            "time": "2024-11-09T07:23:32+00:00"
+            "time": "2024-11-28T20:31:13+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
@@ -2323,11 +2323,11 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "4.x-dev"
-                },
                 "captainhook": {
                     "force-install": true
+                },
+                "branch-alias": {
+                    "dev-main": "4.x-dev"
                 }
             },
             "autoload": {
@@ -2405,16 +2405,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v2.5.3",
+            "version": "v2.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "80d075412b557d41002320b96a096ca65aa2c98d"
+                "reference": "605389f2a7e5625f273b53960dc46aeaf9c62918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/80d075412b557d41002320b96a096ca65aa2c98d",
-                "reference": "80d075412b557d41002320b96a096ca65aa2c98d",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/605389f2a7e5625f273b53960dc46aeaf9c62918",
+                "reference": "605389f2a7e5625f273b53960dc46aeaf9c62918",
                 "shasum": ""
             },
             "require": {
@@ -2452,7 +2452,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.3"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.4"
             },
             "funding": [
                 {
@@ -2468,7 +2468,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-24T14:02:46+00:00"
+            "time": "2024-09-25T14:11:13+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
