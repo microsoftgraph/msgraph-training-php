@@ -1124,16 +1124,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.21.0",
+            "version": "v2.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "340d4201d76d7986139a52dcd57b6dfa3557c947"
+                "reference": "3bd2bd8476b45913c484382f66d862ea204290d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/340d4201d76d7986139a52dcd57b6dfa3557c947",
-                "reference": "340d4201d76d7986139a52dcd57b6dfa3557c947",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/3bd2bd8476b45913c484382f66d862ea204290d9",
+                "reference": "3bd2bd8476b45913c484382f66d862ea204290d9",
                 "shasum": ""
             },
             "require": {
@@ -1165,9 +1165,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.21.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.22.0"
             },
-            "time": "2024-12-17T11:53:24+00:00"
+            "time": "2025-01-02T10:33:11+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
@@ -2362,12 +2362,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "2.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
