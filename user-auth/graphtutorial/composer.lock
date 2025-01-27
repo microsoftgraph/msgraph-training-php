@@ -302,16 +302,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v6.10.2",
+            "version": "v6.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "30c19ed0f3264cb660ea496895cfb6ef7ee3653b"
+                "reference": "8f718f4dfc9c5d5f0c994cdfd103921b43592712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/30c19ed0f3264cb660ea496895cfb6ef7ee3653b",
-                "reference": "30c19ed0f3264cb660ea496895cfb6ef7ee3653b",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/8f718f4dfc9c5d5f0c994cdfd103921b43592712",
+                "reference": "8f718f4dfc9c5d5f0c994cdfd103921b43592712",
                 "shasum": ""
             },
             "require": {
@@ -359,9 +359,9 @@
             ],
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
-                "source": "https://github.com/firebase/php-jwt/tree/v6.10.2"
+                "source": "https://github.com/firebase/php-jwt/tree/v6.11.0"
             },
-            "time": "2024-11-24T11:22:49+00:00"
+            "time": "2025-01-23T05:11:06+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1159,16 +1159,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.23.0",
+            "version": "v2.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "052824c41af8a4affc7178ae1ba1e4ed37e92e10"
+                "reference": "ea80b011f76397d69f4961484f2b131d7f20620a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/052824c41af8a4affc7178ae1ba1e4ed37e92e10",
-                "reference": "052824c41af8a4affc7178ae1ba1e4ed37e92e10",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/ea80b011f76397d69f4961484f2b131d7f20620a",
+                "reference": "ea80b011f76397d69f4961484f2b131d7f20620a",
                 "shasum": ""
             },
             "require": {
@@ -1200,9 +1200,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.23.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.24.0"
             },
-            "time": "2025-01-08T14:47:50+00:00"
+            "time": "2025-01-24T13:21:16+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
