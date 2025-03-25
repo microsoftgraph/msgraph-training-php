@@ -1152,16 +1152,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v2.29.0",
+            "version": "v2.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "b53ec6fa61bd828d26488b20515f4ce9916ff76f"
+                "reference": "e2ef83b25f06d88afbb761f21fda96ec05d978ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/b53ec6fa61bd828d26488b20515f4ce9916ff76f",
-                "reference": "b53ec6fa61bd828d26488b20515f4ce9916ff76f",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/e2ef83b25f06d88afbb761f21fda96ec05d978ad",
+                "reference": "e2ef83b25f06d88afbb761f21fda96ec05d978ad",
                 "shasum": ""
             },
             "require": {
@@ -1193,22 +1193,22 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.29.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v2.30.0"
             },
-            "time": "2025-03-12T07:35:36+00:00"
+            "time": "2025-03-18T16:37:19+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
-            "version": "v2.3.0",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php-core.git",
-                "reference": "2c2978c21c930751ae63915ce0678933bf826981"
+                "reference": "783111f9e81db9da20cc2dbd48aa1876b500ba15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php-core/zipball/2c2978c21c930751ae63915ce0678933bf826981",
-                "reference": "2c2978c21c930751ae63915ce0678933bf826981",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php-core/zipball/783111f9e81db9da20cc2dbd48aa1876b500ba15",
+                "reference": "783111f9e81db9da20cc2dbd48aa1876b500ba15",
                 "shasum": ""
             },
             "require": {
@@ -1247,9 +1247,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php-core/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php-core/tree/v2.3.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php-core/tree/v2.3.1"
             },
-            "time": "2025-02-19T07:10:23+00:00"
+            "time": "2025-03-18T14:27:59+00:00"
         },
         {
             "name": "nyholm/psr7-server",
@@ -2220,16 +2220,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109"
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
             "require": {
@@ -2290,9 +2290,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.1.0"
+                "source": "https://github.com/ramsey/collection/tree/2.1.1"
             },
-            "time": "2025-03-02T04:48:29+00:00"
+            "time": "2025-03-22T05:38:12+00:00"
         },
         {
             "name": "ramsey/uuid",
