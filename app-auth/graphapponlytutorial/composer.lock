@@ -1151,16 +1151,16 @@
         },
         {
             "name": "microsoft/microsoft-graph",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoftgraph/msgraph-sdk-php.git",
-                "reference": "5c0de2bb7c210552f4dc6c73373c0b4317ac8b6b"
+                "reference": "6b466f7bf232e4ad44c8a2cb09ed185292059b15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/5c0de2bb7c210552f4dc6c73373c0b4317ac8b6b",
-                "reference": "5c0de2bb7c210552f4dc6c73373c0b4317ac8b6b",
+                "url": "https://api.github.com/repos/microsoftgraph/msgraph-sdk-php/zipball/6b466f7bf232e4ad44c8a2cb09ed185292059b15",
+                "reference": "6b466f7bf232e4ad44c8a2cb09ed185292059b15",
                 "shasum": ""
             },
             "require": {
@@ -1192,9 +1192,9 @@
             "homepage": "https://developer.microsoft.com/en-us/graph",
             "support": {
                 "issues": "https://github.com/microsoftgraph/msgraph-sdk-php/issues",
-                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v3.0.0"
+                "source": "https://github.com/microsoftgraph/msgraph-sdk-php/tree/v3.1.0"
             },
-            "time": "2026-04-20T17:03:02+00:00"
+            "time": "2026-05-07T20:26:46+00:00"
         },
         {
             "name": "microsoft/microsoft-graph-core",
@@ -2419,16 +2419,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b",
                 "shasum": ""
             },
             "require": {
@@ -2441,7 +2441,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -2466,7 +2466,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -2478,11 +2478,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2026-04-13T15:52:40+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
